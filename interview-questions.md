@@ -14,7 +14,7 @@ Researched answer: The foreign key always goes on the "belongs_to" side, which i
 
 2. Which RESTful routes must always be passed params? Why?
 
-Your answer: Show, edit, update, and delete. They require params because the user must specify which instance they want to view, or edit, or delete.
+Your answer: Show, edit, update and delete. They require params because the user must specify which instance they want to view, or edit, or delete.
 
 Researched answer: Params are required when the user needs to specify an action to take on a specific instance. The params identify the instance the user wnats to work with.
 

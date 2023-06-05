@@ -12,7 +12,7 @@
 // Reminder: The test will call your function
 // Run the file with the following command: $ yarn jest
 
-// --------------------1) Create a function that takes in an array of objects and returns an array with a sentence about each person with their name capitalized.
+// --------------------1) Create a function that takes in an array of objects and returns an array with a sentence about each person with their name capitalized
 
 // PseudoCode:
   // Input: an array of objects
