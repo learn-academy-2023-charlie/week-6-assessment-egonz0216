@@ -6,25 +6,25 @@
 
 # FILE: app/controller/blog_posts_controller.rb
 
-# ---1)Class BlogPostsController is a child of ApplicationController and will inherit certain properties.
+# ---1)
 class BlogPostsController < ApplicationController
   def index
-    # ---2) Declaration of an instance variable that will display all of the instances in BlogPost
+    # ---2)
     @posts = BlogPost.all
   end
 
-  # ---3) Declaration of a new method: show
+  # ---3)
   def show
     @post = BlogPost.find(params[:id])
   end
 
-  # ---4) Declaration of a new method: new
+  # ---4)
   def new
     @post = BlogPost.new
   end
 
   def create
-    # ---5) Instance variable used to create a new object in BlogPost
+    # ---5)
     @post = BlogPost.create(blog_post_params)
     if @post.valid?
       redirect_to blog_post_path(@post)
@@ -32,13 +32,13 @@ class BlogPostsController < ApplicationController
   end
 
   def edit
-    # ---6) Instance variable that is storing the information that will be passed as a param.
+    # ---6)
     @post = BlogPost.find(params[:id])
   end
 
   def update
     @post = BlogPost.find(params[:id])
-    # ---7) Updates BlogPost with the title and content params that are passed through under private.
+    # ---7)
     @post.update(blog_post_params)
     if @post.valid?
       redirect_to blog_post_path(@post)
@@ -48,15 +48,15 @@ class BlogPostsController < ApplicationController
   def destroy
     @post = BlogPost.find(params[:id])
     if @post.destroy
-      # ---8) Defines where the user will go after calling on the destroy method
+      # ---8)
       redirect_to blog_posts_path
     end
   end
 
-  # ---9) Defines where the strong params begin, and where the browser will stop displaying information.
+  # ---9)
   private
   def blog_post_params
-    # ---10) Declares the params to be passed into BlogPost - title and content.
+    # ---10)
     params.require(:blog_post).permit(:title, :content)
   end
 end
