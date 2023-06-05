@@ -9,7 +9,7 @@
 # ---1)Class BlogPostsController is a child of ApplicationController and will inherit certain properties.
 class BlogPostsController < ApplicationController
   def index
-    # ---2) Declaration of an instance variable that will display all of the instances in BlogPost
+    # ---2) Declaration of an instance variable that will display all of the instances in BlogPost.
     @posts = BlogPost.all
   end
 
